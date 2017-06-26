@@ -1157,7 +1157,7 @@ FULL_SYSTEMIMAGE_DEPS := $(INTERNAL_SYSTEMIMAGE_FILES) $(INTERNAL_USERIMAGES_DEP
 INSTALLED_FILES_FILE := $(PRODUCT_OUT)/installed-files.txt
 $(INSTALLED_FILES_FILE): $(FULL_SYSTEMIMAGE_DEPS)
 	$(hide) ./vendor/pure/tools/changelog
-	$(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/purenexus_$(TARGET_PRODUCT)-$(PURE_VERSION)_changelog.txt
+	$(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/purefusion_$(TARGET_PRODUCT)-$(PURE_VERSION)_changelog.txt
 	@echo Installed file list: $@
 	@mkdir -p $(dir $@)
 	@rm -f $@
@@ -2145,9 +2145,9 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE)
 	   $(if $(OEM_OTA_CONFIG), -o $(OEM_OTA_CONFIG)) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/purenexus_$(TARGET_PRODUCT)-$(PURE_VERSION).zip
+CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/purefusion_$(TARGET_PRODUCT)-$(PURE_VERSION).zip
 
-ZIP_LOCATION := /out/target/product/$(TARGET_PRODUCT)/purenexus_$(TARGET_PRODUCT)-$(PURE_VERSION).zip
+ZIP_LOCATION := /out/target/product/$(TARGET_PRODUCT)/purefusion_$(TARGET_PRODUCT)-$(PURE_VERSION).zip
 
 .PHONY: otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
