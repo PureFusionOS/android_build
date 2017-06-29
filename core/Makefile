@@ -2166,7 +2166,7 @@ bacon: otapackage
     @echo -e " /_/     \__,_/ /_/    \___//_/      \__,_/ /____/ /_/  \____//_/ /_/  "                                                                 
     @echo -e "                                                                       "
 	@echo -e ""
-	@echo -e "   
+	@echo -e "                                                               Project "
 	@echo -e ""
 	@echo -e "ZIP: $(ZIP_LOCATION)"
 	@echo -e "SIZE: "`ls -hal $(CUSTOM_TARGET_PACKAGE) | cut -d ' ' -f 5`
