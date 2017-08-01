@@ -267,7 +267,7 @@ def create_dependency_manifest(dependencies):
 
 
 def create_common_dependencies_manifest(dependencies):
-    dep_file = "omni.dependencies"
+    dep_file = "fusion.dependencies"
     common_list = []
     if dependencies is not None:
         for dependency in dependencies:
